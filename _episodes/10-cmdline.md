@@ -1,5 +1,5 @@
 ---
-title: Command-Line Programs
+title: Bonus: Command-Line Programs
 teaching: 30
 exercises: 0
 questions:
