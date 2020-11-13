@@ -28,16 +28,18 @@ This lesson is also available in [R][R] and [MATLAB][MATLAB].
 
 | # |  Episode | Time | Question(s) |
 |--:|:---------|:----:|:------------|
-| 1 | [Analyzing Patient Data][episode01] | 90 | How can I process tabular data files in Python? |
-| 2 | [Repeating Actions with Loops][episode02] | 30 | How can I do the same operations on many different values? |
-| 3 | [Storing Multiple Values in Lists][episode03] | 30 | How can I store many values together? |
-| 4 | [Analyzing Data from Multiple Files][episode04] | 20 | How can I do the same operations on many different files? |
-| 5 | [Making Choices][episode05] | 30 | How can my programs do different things based on data values? |
-| 6 | [Creating Functions][episode06] | 30 | How can I define new functions?<br>What’s the difference between defining and calling a function?<br>What happens when I call a function? |
-| 7 | [Errors and Exceptions][episode07] | 30 | How does Python report errors?<br>How can I handle errors in Python programs? |
-| 8 | [Defensive Programming][episode08] | 30 | How can I make my programs more reliable? |
-| 9 | [Debugging][episode09] | 30 | How can I debug my program? |
-|10 | [Command-Line Programs][episode10] | 30 | How can I write Python programs that will work like Unix command-line tools? |
+| 1 | [Python Fundamentals][episode01] | 30 | What basic data types can I work with in Python?<br>How can I create a new variable in Python?<br>Can I change the value associated with a variable after I create it? |
+| 2 | [Analyzing Patient Data][episode02] | 60 | How can I process tabular data files in Python? |
+| 3 | [Visualizing Tabular Data][episode03] | 50 | How can I visualize tabular data in Python?<br>How can I group several plots together? |
+| 4 | [Repeating Actions with Loops][episode04] | 30 | How can I do the same operations on many different values? |
+| 5 | [Storing Multiple Values in Lists][episode05] | 30 | How can I store many values together? |
+| 6 | [Analyzing Data from Multiple Files][episode06] | 20 | How can I do the same operations on many different files? |
+| 7 | [Making Choices][episode07] | 30 | How can my programs do different things based on data values? |
+| 8 | [Creating Functions][episode08] | 30 | How can I define new functions?<br>What’s the difference between defining and calling a function?<br>What happens when I call a function? |
+| 9 | [Errors and Exceptions][episode09] | 30 | How does Python report errors?<br>How can I handle errors in Python programs? |
+|10 | [Defensive Programming][episode10] | 30 | How can I make my programs more reliable? |
+|11 | [Debugging][episode11] | 30 | How can I debug my program? |
+|12 | [Command-Line Programs][episode12] | 30 | How can I write Python programs that will work like Unix command-line tools? |
 
 
 ## Contributing
@@ -54,21 +56,32 @@ ways to render the lesson locally, and even how to write new episodes!
 ## Maintainers
 
 Lesson maintainers are [Trevor Bekolay][trevor_bekolay], [Maxim Belkin][maxim_belkin],
-[Anne Fouilloux][anne_fouilloux], [Lauren Ko][lauren_ko], [Valentina Staneva][valentina_staneva],
-[Mike Trizna][mike_trizna], and [creator][swc_history] of Software Carpentry:
-[Greg Wilson][greg_wilson]
+[Anne Fouilloux][anne_fouilloux], [Lauren Ko][lauren_ko], [Valentina Staneva][valentina_staneva], and [creator][swc_history] of Software Carpentry:
+[Greg Wilson][greg_wilson].
 
 ## Authors
-A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
+A list of contributors to the lesson can be found in [AUTHORS](AUTHORS).
 
 ## License
-Instructional material from this lesson is made available under the Creative
-Commons Attribution (CC BY 4.0) license. Except where otherwise noted, example
-programs and software included as part of this lesson are made available under
-the MIT license. For more information, see [LICENSE.md](LICENSE.md).
+Instructional material from this lesson is made available under the
+[Creative Commons Attribution][cc-by-human] ([CC BY 4.0][cc-by-legal]) license. Except where
+otherwise noted, example programs and software included as part of this lesson are made available
+under the [MIT license][mit-license]. For more information, see [LICENSE.md](LICENSE.md).
 
 ## Citation
-To cite this lesson, please consult with [CITATION](CITATION)
+To cite this lesson, please consult with [CITATION](CITATION).
+
+## About Software Carpentry
+
+Software Carpentry is a volunteer project that teaches basic computing skills to researchers since
+1998. More information about Software Carpentry can be found [here][swc-about].
+
+## About The Carpentries
+
+The Carpentries is a fiscally sponsored project of [Community Initiatives][community-initiatives], a
+registered 501(c)3 non-profit organisation based in California, USA. We are a global community
+teaching foundational computational and data science skills to researchers in academia, industry and
+government. More information can be found [here][cp-about].
 
 [lesson-example]: https://carpentries.github.io/lesson-example
 [anne_fouilloux]: https://github.com/annefou
@@ -91,13 +104,21 @@ To cite this lesson, please consult with [CITATION](CITATION)
 [slack_channel_url]: https://swcarpentry.slack.com/messages/C9Y0L6MF0
 [travis_svg]: https://travis-ci.org/swcarpentry/python-novice-inflammation.svg?branch=gh-pages
 [travis_url]: https://travis-ci.org/swcarpentry/python-novice-inflammation
-[episode01]: https://swcarpentry.github.io/python-novice-inflammation/01-numpy/index.html
-[episode02]: https://swcarpentry.github.io/python-novice-inflammation/02-loop/index.html
-[episode03]: https://swcarpentry.github.io/python-novice-inflammation/03-lists/index.html
-[episode04]: https://swcarpentry.github.io/python-novice-inflammation/04-files/index.html
-[episode05]: https://swcarpentry.github.io/python-novice-inflammation/05-cond/index.html
-[episode06]: https://swcarpentry.github.io/python-novice-inflammation/06-func/index.html
-[episode07]: https://swcarpentry.github.io/python-novice-inflammation/07-errors/index.html
-[episode08]: https://swcarpentry.github.io/python-novice-inflammation/08-defensive/index.html
-[episode09]: https://swcarpentry.github.io/python-novice-inflammation/09-debugging/index.html
-[episode10]: https://swcarpentry.github.io/python-novice-inflammation/10-cmdline/index.html
+[episode01]: https://swcarpentry.github.io/python-novice-inflammation/01-intro/index.html
+[episode02]: https://swcarpentry.github.io/python-novice-inflammation/02-numpy/index.html
+[episode03]: https://swcarpentry.github.io/python-novice-inflammation/03-matplotlib/index.html
+[episode04]: https://swcarpentry.github.io/python-novice-inflammation/04-loop/index.html
+[episode05]: https://swcarpentry.github.io/python-novice-inflammation/05-lists/index.html
+[episode06]: https://swcarpentry.github.io/python-novice-inflammation/06-files/index.html
+[episode07]: https://swcarpentry.github.io/python-novice-inflammation/07-cond/index.html
+[episode08]: https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html
+[episode09]: https://swcarpentry.github.io/python-novice-inflammation/09-errors/index.html
+[episode10]: https://swcarpentry.github.io/python-novice-inflammation/10-defensive/index.html
+[episode11]: https://swcarpentry.github.io/python-novice-inflammation/11-debugging/index.html
+[episode12]: https://swcarpentry.github.io/python-novice-inflammation/12-cmdline/index.html
+[community-initiatives]: https://communityin.org
+[cp-about]: https://carpentries.org/about
+[swc-about]: https://software-carpentry.org/about/
+[mit-license]: https://opensource.org/licenses/mit-license.html
+[cc-by-human]: https://creativecommons.org/licenses/by/4.0/
+[cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode

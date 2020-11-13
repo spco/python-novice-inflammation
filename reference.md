@@ -1,7 +1,5 @@
 ---
 layout: reference
-permalink: /reference/
-root: ..
 ---
 
 ## Glossary
@@ -161,6 +159,11 @@ mutable
 :   Changeable. The value of mutable data can be altered after it has been
     created. See [immutable](#immutable)."
 
+notebook
+:   Interactive computational environment accessed via your web browser, in which you can write
+    and execute Python code and combine it with explanatory text, mathematics and visualizations.
+    Examples are IPython or Jupyter notebooks.
+
 object
 :   A collection of conceptually related variables ([members](#member)) and
     functions using those variables ([methods](#method)).
@@ -242,7 +245,7 @@ string
 
 syntax
 :   The rules that define how code must be written for a computer to understand.
-    
+
 syntax error
 :   A programming error that occurs when statements are in an order or contain characters
     not expected by the programming language.

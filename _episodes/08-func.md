@@ -54,12 +54,12 @@ def fahr_to_celsius(temp):
 ~~~
 {: .language-python}
 
-![The Blueprint for a Python Function](../fig/python-function.svg)
+![Labeled parts of a Python function definition](../fig/python-function.svg)
 
 
 The function definition opens with the keyword `def` followed by the
 name of the function (`fahr_to_celsius`) and a parenthesized list of parameter names (`temp`). The
-[body]({{ page.root }}/reference/#body) of the function --- the
+[body]({{ page.root }}/reference.html#body) of the function --- the
 statements that are executed when it runs --- is indented below the
 definition line.  The body concludes with a `return` keyword followed by the return value.
 
@@ -67,7 +67,7 @@ When we call the function,
 the values we pass to it are assigned to those variables
 so that we can use them inside the function.
 Inside the function,
-we use a [return statement]({{ page.root }}/reference/#return-statement) to send a result
+we use a [return statement]({{ page.root }}/reference.html#return-statement) to send a result
 back to whoever asked for it.
 
 Let's try running our function.
@@ -118,7 +118,7 @@ What about converting Fahrenheit to Kelvin?
 We could write out the formula,
 but we don't need to.
 Instead,
-we can [compose]({{ page.root }}/reference/#compose) the two functions we have already created:
+we can [compose]({{ page.root }}/reference.html#compose) the two functions we have already created:
 
 ~~~
 def fahr_to_kelvin(temp_f):
@@ -257,13 +257,13 @@ print(offset_mean(data, 0))
 {: .language-python}
 
 ~~~
-[[-6.14875 -6.14875 -5.14875 ..., -3.14875 -6.14875 -6.14875]
- [-6.14875 -5.14875 -4.14875 ..., -5.14875 -6.14875 -5.14875]
- [-6.14875 -5.14875 -5.14875 ..., -4.14875 -5.14875 -5.14875]
- ...,
- [-6.14875 -5.14875 -5.14875 ..., -5.14875 -5.14875 -5.14875]
- [-6.14875 -6.14875 -6.14875 ..., -6.14875 -4.14875 -6.14875]
- [-6.14875 -6.14875 -5.14875 ..., -5.14875 -5.14875 -6.14875]]
+[[-6.14875 -6.14875 -5.14875 ... -3.14875 -6.14875 -6.14875]
+ [-6.14875 -5.14875 -4.14875 ... -5.14875 -6.14875 -5.14875]
+ [-6.14875 -5.14875 -5.14875 ... -4.14875 -5.14875 -5.14875]
+ ...
+ [-6.14875 -5.14875 -5.14875 ... -5.14875 -5.14875 -5.14875]
+ [-6.14875 -6.14875 -6.14875 ... -6.14875 -4.14875 -6.14875]
+ [-6.14875 -6.14875 -5.14875 ... -5.14875 -5.14875 -6.14875]]
 ~~~
 {: .output}
 
@@ -323,11 +323,11 @@ the difference is very small.
 It's still possible that our function is wrong,
 but it seems unlikely enough that we should probably get back to doing our analysis.
 We have one more task first, though:
-we should write some [documentation]({{ page.root }}/reference/#documentation) for our function
+we should write some [documentation]({{ page.root }}/reference.html#documentation) for our function
 to remind ourselves later what it's for and how to use it.
 
 The usual way to put documentation in software is
-to add [comments]({{ page.root }}/reference/#comment) like this:
+to add [comments]({{ page.root }}/reference.html#comment) like this:
 
 ~~~
 # offset_mean(data, target_mean_value):
@@ -343,8 +343,8 @@ that string is attached to the function as its documentation:
 
 ~~~
 def offset_mean(data, target_mean_value):
-    '''Return a new array containing the original data
-       with its mean offset to match the desired value.'''
+    """Return a new array containing the original data
+       with its mean offset to match the desired value."""
     return (data - numpy.mean(data)) + target_mean_value
 ~~~
 {: .language-python}
@@ -365,21 +365,21 @@ offset_mean(data, target_mean_value)
 ~~~
 {: .output}
 
-A string like this is called a [docstring]({{ page.root }}/reference/#docstring).
+A string like this is called a [docstring]({{ page.root }}/reference.html#docstring).
 We don't need to use triple quotes when we write one,
 but if we do,
 we can break the string across multiple lines:
 
 ~~~
 def offset_mean(data, target_mean_value):
-    '''Return a new array containing the original data
+    """Return a new array containing the original data
        with its mean offset to match the desired value.
 
     Examples
     --------
     >>> offset_mean([1, 2, 3], 0)
     array([-1.,  0.,  1.])
-    '''
+    """
     return (data - numpy.mean(data)) + target_mean_value
 
 help(offset_mean)
@@ -453,14 +453,14 @@ let's re-define our `offset_mean` function like this:
 
 ~~~
 def offset_mean(data, target_mean_value=0.0):
-    '''Return a new array containing the original data
+    """Return a new array containing the original data
        with its mean offset to match the desired value, (0 by default).
 
     Examples
     --------
     >>> offset_mean([1, 2, 3])
     array([-1.,  0.,  1.])
-    '''
+    """
     return (data - numpy.mean(data)) + target_mean_value
 ~~~
 {: .language-python}
@@ -484,7 +484,7 @@ print(offset_mean(test_data, 3))
 
 But we can also now call it with just one parameter,
 in which case `target_mean_value` is automatically assigned
-the [default value]({{ page.root }}/reference/#default-value) of 0.0:
+the [default value]({{ page.root }}/reference.html#default-value) of 0.0:
 
 ~~~
 more_data = 5 + numpy.zeros((2, 2))
@@ -766,7 +766,7 @@ readable code!
 >
 > > ## Solution
 > > ~~~
-> > '''Takes an array as input, and returns a corresponding array scaled so
+> > """Takes an array as input, and returns a corresponding array scaled so
 > > that 0 corresponds to the minimum and 1 to the maximum value of the input array.
 > >
 > > Examples:
@@ -775,7 +775,7 @@ readable code!
 > >        0.55555556,  0.66666667,  0.77777778,  0.88888889,  1.        ])
 > > >>> rescale(numpy.linspace(0, 100, 5))
 > > array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
-> > '''
+> > """
 > > ~~~
 > > {: .language-python}
 > {: .solution}
@@ -791,7 +791,7 @@ readable code!
 > > ## Solution
 > > ~~~
 > > def rescale(input_array, low_val=0.0, high_val=1.0):
-> >     '''rescales input array values to lie between low_val and high_val'''
+> >     """rescales input array values to lie between low_val and high_val"""
 > >     L = numpy.min(input_array)
 > >     H = numpy.max(input_array)
 > >     intermed_array = (input_array - L) / (H - L)
@@ -811,12 +811,12 @@ readable code!
 > k = 0
 >
 > def f2k(f):
->     k = ((f-32)*(5.0/9.0)) + 273.15
+>     k = ((f - 32) * (5.0 / 9.0)) + 273.15
 >     return k
 >
-> f2k(8)
-> f2k(41)
-> f2k(32)
+> print(f2k(8))
+> print(f2k(41))
+> print(f2k(32))
 >
 > print(k)
 > ~~~
@@ -826,7 +826,7 @@ readable code!
 > >
 > > ~~~
 > > 259.81666666666666
-> > 287.15
+> > 278.15
 > > 273.15
 > > 0
 > > ~~~

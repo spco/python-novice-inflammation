@@ -48,12 +48,12 @@ done
 The second line of this code uses the keyword `if` to tell Python that we want to make a choice.
 If the test that follows the `if` statement is true,
 the body of the `if`
-(i.e., the set of lines indented underneath it) is executed.
+(i.e., the set of lines indented underneath it) is executed, and "greater" is printed.
 If the test is false,
-the body of the `else` is executed instead.
-Only one or the other is ever executed:
+the body of the `else` is executed instead, and "not greater" is printed.
+Only one or the other is ever executed before continuing on with program execution to print "done":
 
-![Executing a Conditional](../fig/python-flowchart-conditional.png)
+![A flowchart diagram of the if-else construct that tests if variable num is greater than 100](../fig/python-flowchart-conditional.png)
 
 Conditional statements don't have to include an `else`.
 If there isn't one,
@@ -98,11 +98,24 @@ else:
 Note that to test for equality we use a double equals sign `==`
 rather than a single equals sign `=` which is used to assign values.
 
+> ## Comparing in Python
+>
+> Along with the `>` and `==` operators we have already used for comparing values in our conditionals, 
+> there are a few more options to know about:
+>
+> - `>`: greater than
+> - `<`: less than
+> - `==`: equal to
+> - `!=`: does not equal
+> - `>=`: greater than or equal to
+> - `<=`: less than or equal to
+{: .callout}
+
 We can also combine tests using `and` and `or`.
 `and` is only true if both parts are true:
 
 ~~~
-if (1 > 0) and (-1 > 0):
+if (1 > 0) and (-1 >= 0):
     print('both parts are true')
 else:
     print('at least one part is false')
@@ -117,7 +130,7 @@ at least one part is false
 while `or` is true if at least one part is true:
 
 ~~~
-if (1 < 0) or (-1 < 0):
+if (1 < 0) or (1 >= 0):
     print('at least one test is true')
 ~~~
 {: .language-python}
@@ -308,12 +321,25 @@ freeing us from having to manually examine every plot for features we've seen be
 > Compare your implementation with your partner's:
 > do you get the same answer for all possible pairs of numbers?
 >
+> > ## Hint
+> > There is a [built-in function `abs`][abs-function] that returns the absolute value of
+> > a number:
+> > ~~~
+> > print(abs(-12))
+> > ~~~
+> > {: .language-python}
+> > ~~~
+> > 12
+> > ~~~
+> > {: .output}
+> {: .solution}
+>
 > > ## Solution 1
 > > ~~~
 > > a = 5
 > > b = 5.1
 > >
-> > if abs(a - b) < 0.1 * abs(b):
+> > if abs(a - b) <= 0.1 * abs(b):
 > >     print('True')
 > > else:
 > >     print('False')
@@ -323,7 +349,7 @@ freeing us from having to manually examine every plot for features we've seen be
 >
 > > ## Solution 2
 > > ~~~
-> > print(abs(a - b) < 0.1 * abs(b))
+> > print(abs(a - b) <= 0.1 * abs(b))
 > > ~~~
 > > {: .language-python}
 > >
@@ -335,7 +361,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > ## In-Place Operators
 >
 > Python (and most other languages in the C family) provides
-> [in-place operators]({{ page.root }}/reference/#in-place-operators)
+> [in-place operators]({{ page.root }}/reference.html#in-place-operators)
 > that work like this:
 >
 > ~~~
@@ -392,7 +418,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > passed as an argument, that is:
 >
 > ~~~
-> "String".startswith("Str")
+> 'String'.startswith('Str')
 > ~~~
 > {: .language-python}
 > ~~~
@@ -401,7 +427,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > {: .output}
 > But
 > ~~~
-> "String".startswith("str")
+> 'String'.startswith('str')
 > ~~~
 > {: .language-python}
 > ~~~
@@ -424,7 +450,7 @@ freeing us from having to manually examine every plot for features we've seen be
 > Your solution should:
 >
 > 1.  loop over the names of the files
-> 2.  figure out which group each filename belongs
+> 2.  figure out which group each filename belongs in
 > 3.  append the filename to that list
 >
 > In the end the three lists should be:
@@ -440,11 +466,11 @@ freeing us from having to manually examine every plot for features we've seen be
 > > ~~~
 > > for filename in filenames:
 > >     if filename.startswith('inflammation-'):
-> >         large_files.append(file)
+> >         large_files.append(filename)
 > >     elif filename.startswith('small-'):
-> >         small_files.append(file)
+> >         small_files.append(filename)
 > >     else:
-> >         other_files.append(file)
+> >         other_files.append(filename)
 > >
 > > print('large_files:', large_files)
 > > print('small_files:', small_files)
@@ -471,10 +497,12 @@ freeing us from having to manually examine every plot for features we've seen be
 > >     if char in vowels:
 > >         count += 1
 > >
-> > print("The number of vowels in this string is " + str(count))
+> > print('The number of vowels in this string is ' + str(count))
 > > ~~~
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
+
+[abs-function]: https://docs.python.org/3/library/functions.html#abs
 
 {% include links.md %}
