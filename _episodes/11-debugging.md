@@ -1,5 +1,5 @@
 ---
-title: Bonus material: Debugging
+title: Debugging
 teaching: 30
 exercises: 20
 questions:

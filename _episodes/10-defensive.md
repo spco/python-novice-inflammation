@@ -1,5 +1,5 @@
 ---
-title: Bonus material: Defensive Programming
+title: Defensive Programming
 teaching: 30
 exercises: 10
 questions:
